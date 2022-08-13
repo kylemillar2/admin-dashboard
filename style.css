@@ -52,10 +52,6 @@ body {
   transform: scale(0.97);
 }
 
-.dashboard {
-  font-size: 1.6rem;
-}
-
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
@@ -127,6 +123,17 @@ body {
   font-size: 1.3rem;
 }
 
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.action-buttons button {
+  border-radius: 20px;
+  padding: 8px 10px 8px 10px;
+}
+
 .center {
   align-self: center;
 }
@@ -136,15 +143,21 @@ body {
   display: grid;
   grid-template-rows: 100px repeat(10, 50px);
   font-size: 1.3rem;
-  padding: 15px;
+  padding-left: 20px;
+  padding-right: 15px;
   background-color: lightblue;
   color: white;
   font-weight: 700;
 }
 
+.sidebar .dashboard {
+  font-size: 1.6rem;
+}
+
 .sidebar-item {
   display: flex;
   gap: 10px;
+  cursor: pointer;
 }
 
 .sidebar-item.dashboard img {
@@ -155,4 +168,8 @@ body {
 .sidebar-item img {
   width: 1.6rem;
   height: 1.6rem;
+}
+
+.sidebar-item:active {
+  transform: scale(0.97);
 }
