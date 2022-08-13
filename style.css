@@ -9,16 +9,47 @@ body {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 5fr;
-  width: 100vw
+  width: 100vw;
+  min-height: 100vh;
 }
 
 .account-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-columns: min-content min-content auto;
+  padding-left: 60px;
+  padding-right: 30px;
+  gap: 30px;
 }
 
-.big-profile-picture {
-  grid-row: 1 / 3;
+.notification-button, .profile-picture, .username {
+  cursor: pointer;
+}
+
+.notification-button {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.profile-picture {
+  grid-column: 2 / 3;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.username-container {
+  grid-column: 3 / 4;
+}
+
+.username {
+  width: fit-content;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.profile-picture:active, .username:active, .notification-button:active {
+  transform-origin: center center;
+  transform: scale(0.97);
 }
 
 .dashboard {
@@ -38,7 +69,6 @@ body {
   grid-template-rows: 1fr;
   grid-auto-rows: 1fr;
   gap: 20px;
-  
 }
 
 .project {
@@ -49,6 +79,26 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  column-gap: 20px;
+  padding: 0 30px 15px 30px;
+  box-shadow: 0 10px 15px -15px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 16px;
+}
+
+.search-bar img {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.search-bar input {
+  border-radius: 15px;
+  width: 100%;
+  background-color: lightgray;
+  padding-left: 8px;
 }
 
 .account-info {
