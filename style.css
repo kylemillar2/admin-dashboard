@@ -91,7 +91,7 @@ body {
   gap: 10px;
 }
 
-.sidebar-item .dashboard img {
+.sidebar-item.dashboard img {
   width: 2rem;
   height: 2rem;
 }
