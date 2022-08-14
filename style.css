@@ -234,3 +234,7 @@ p {
   width: 3.2rem;
   height: 3.2rem;
 }
+
+.trending-username {
+  font-weight: 700;
+}
